@@ -1,14 +1,22 @@
-import React from "react";
 import * as C from "./styles";
 import { Link } from "react-router-dom";
 import { AiFillLock } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import GoogleLogin from "react-google-login";
+import { useRef, useLayoutEffect } from "react";
 
 export const Login = () => {
   const responseGoogle = (response) => {
     console.log(response);
   };
+
+  const containerRef = useRef();
+
+  const verifyInput = () => {
+    containerRef.current.value.length < 1
+      ? console.log("preencha o campo")
+      : console.log("valido!!");
+  }
 
   return (
     <C.Wrapper>
@@ -19,7 +27,12 @@ export const Login = () => {
             <MdEmail />
             <p>E-mail</p>
           </label>
-          <input type="email" placeholder="Insira seu E-mail" maxLength={50} />
+          <input
+            ref={containerRef}
+            type="email"
+            placeholder="Insira seu E-mail"
+            maxLength={50}
+          />
 
           <label htmlFor="password">
             <AiFillLock />
@@ -31,7 +44,7 @@ export const Login = () => {
             maxLength={50}
           />
 
-          <button>Entrar</button>
+          <button onClick={verifyInput}>Entrar</button>
 
           <C.Alternatives>
             <Link to="/forgetpassword">Esqueceu a senha?</Link>
