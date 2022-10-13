@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   animation: ${appear} 1s ease;
 `;
+
 export const FormContainer = styled.div`
   width: 30em;
   height: 30em;
@@ -25,12 +26,12 @@ export const FormContainer = styled.div`
   box-shadow: 0 0 1em 0.1em gray;
 
   @media only screen and (max-width: 500px) {
-    width: 80%;
-    height: 25em;
+    width: 100%;
+    height: 100%;
   }
 
   h1 {
-    font-size: clamp(14px, 2vw, 50px);
+    font-size: clamp(20px, 2vw, 50px);
     color: var(--buttons-bg);
     text-align: center;
     padding: 1em;
@@ -42,9 +43,9 @@ export const FormContainer = styled.div`
     align-items: center;
     height: 100%;
 
-    img{
-        width: 2em;
-        height: 2em;
+    img {
+      width: 2em;
+      height: 2em;
     }
 
     label {
@@ -52,11 +53,16 @@ export const FormContainer = styled.div`
       display: flex;
       align-items: center;
 
+      @media only screen and (max-width: 500px) {
+        width: 90%;
+        height: 3em;
+      }
+
       p {
         color: var(--terciary-color);
         padding: 0.5em 0;
         font-weight: 700;
-        padding-left: .5em;
+        padding-left: 0.5em;
       }
     }
 
@@ -83,6 +89,11 @@ export const FormContainer = styled.div`
       margin-bottom: 1em;
       border: 1px solid gray;
       border-radius: 0.5em;
+
+      @media only screen and (max-width: 500px) {
+        width: 90%;
+        height: 3.5em;
+      }
     }
 
     span {
