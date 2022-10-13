@@ -31,7 +31,7 @@ export const FormContainer = styled.div`
   }
 
   h1 {
-    font-size: clamp(20px, 2vw, 50px);
+    font-size: clamp(28px, 2vw, 50px);
     color: var(--buttons-bg);
     text-align: center;
     padding: 1em;
@@ -41,7 +41,7 @@ export const FormContainer = styled.div`
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    height: 100%;
+    height: 100vh;
 
     img {
       width: 2em;
@@ -79,6 +79,11 @@ export const FormContainer = styled.div`
 
       :hover {
         background: var(--buttons-bg-hover);
+      }
+
+      @media only screen and (max-width: 500px) {
+        width: 90%;
+        height: 3.5em;
       }
     }
 
