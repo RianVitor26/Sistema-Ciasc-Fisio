@@ -21,7 +21,7 @@ export const FormContainer = styled.div`
 
   h1 {
     font-size: clamp(14px, 2vw, 50px);
-    color: var(--primary-color);
+    color: var(--buttons-bg);
     text-align: center;
     padding: 1em;
   }
@@ -32,11 +32,22 @@ export const FormContainer = styled.div`
     align-items: center;
     height: 100%;
 
+    img{
+        width: 2em;
+        height: 2em;
+    }
+
     label {
       width: 70%;
-      color: var(--terciary-color);
-      padding: 0.5em 0;
-      font-weight: 700;
+      display: flex;
+      align-items: center;
+
+      p {
+        color: var(--terciary-color);
+        padding: 0.5em 0;
+        font-weight: 700;
+        padding-left: .5em;
+      }
     }
 
     button {
@@ -65,7 +76,7 @@ export const FormContainer = styled.div`
     }
 
     span {
-      color: var(--terciary-color);
+      color: var(--buttons-bg);
       position: relative;
       height: 1em;
       padding: 0 1em;
@@ -76,7 +87,7 @@ export const FormContainer = styled.div`
         content: "";
         height: 1px;
         width: 50%;
-        background-color: var(--primary-color);
+        background-color: var(--buttons-bg);
         bottom: 50%;
         right: 100%;
       }
@@ -86,7 +97,7 @@ export const FormContainer = styled.div`
         content: "";
         height: 1px;
         width: 50%;
-        background-color: var(--primary-color);
+        background-color: var(--buttons-bg);
         bottom: 50%;
         left: 100%;
       }
@@ -103,12 +114,32 @@ export const Alternatives = styled.div`
 
     a{
         font-size: clamp(12px, .5em, 50px);
+        color: var(--buttons-bg);
+        transition: all .5s ease;
+        :hover{
+            color: blue;
+        }
         :nth-child(1){
-            color: red;
             padding-right: 1vw;
         }
         :nth-child(2){
             padding-left: 1vw;
         }
     }
+`;
+export const LoginWith = styled.div`
+  width: 100%;
+  height: 5em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    :nth-child(1) {
+      padding-right: 1vw;
+    }
+    :nth-child(2) {
+      padding-left: 1vw;
+    }
+  }
 `;
