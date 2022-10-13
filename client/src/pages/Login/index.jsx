@@ -3,6 +3,10 @@ import * as C from './styles'
 
 export const Login = () => {
   return (
-    <C.Wrapper>Login</C.Wrapper>
+    <C.Wrapper>
+      <C.FormContainer>
+        
+      </C.FormContainer>
+    </C.Wrapper>
   )
 }

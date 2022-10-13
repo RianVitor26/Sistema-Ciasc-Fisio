@@ -16,9 +16,9 @@ export const GlobalStyle = createGlobalStyle`
     :root{
         // Color palette
         --body-bg: white;
-        --form-bg: blue;
-        --primary-text: white;
-        --secondary-text: gray;
+        --primary-bg: #000055;
+        --primary-color: white;
+        --secondary-color: gray;
     }
 
     body{
