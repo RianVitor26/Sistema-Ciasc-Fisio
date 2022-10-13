@@ -1,12 +1,22 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
+
+const appear = keyframes`
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+`;
 
 export const Wrapper = styled.div`
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: ${appear} 1s ease;
+`;
 export const FormContainer = styled.div`
   width: 30em;
   height: 30em;
