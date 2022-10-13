@@ -12,17 +12,17 @@ export const Login = () => {
 
   const containerRef = useRef();
 
-  const verifyInput = () => {
+  const checkEmptyfields = () => {
     containerRef.current.value.length < 1
       ? console.log("preencha o campo")
       : console.log("valido!!");
-  }
+  };
 
   return (
     <C.Wrapper>
       <C.FormContainer>
         <h1>Bem-vindo ao CIASC</h1>
-        <form action="">
+        <form>
           <label htmlFor="email">
             <MdEmail />
             <p>E-mail</p>
@@ -42,9 +42,10 @@ export const Login = () => {
             type="password"
             placeholder="Insira sua senha"
             maxLength={50}
+            ref={containerRef}
           />
 
-          <button onClick={verifyInput}>Entrar</button>
+          <button onClick={checkEmptyfields}>Entrar</button>
 
           <C.Alternatives>
             <Link to="/forgetpassword">Esqueceu a senha?</Link>

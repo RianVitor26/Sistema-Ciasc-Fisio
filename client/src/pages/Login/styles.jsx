@@ -41,7 +41,6 @@ export const FormContainer = styled.div`
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    height: 100vh;
 
     img {
       width: 2em;
@@ -105,13 +104,6 @@ export const FormContainer = styled.div`
         height: 3.5em;
       }
     }
-
-    b {
-      text-align: right;
-      padding-right: 20em;
-      width: 100%;
-      font-size: .4em;
-      }
 
     span {
       color: var(--buttons-bg);
