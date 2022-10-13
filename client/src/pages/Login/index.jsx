@@ -18,7 +18,7 @@ export const Login = () => {
 
           <label htmlFor="password">
             <AiFillLock />
-            <p>Password</p>
+            <p>Senha</p>
           </label>
           <input type="password" placeholder="Insira sua senha" />
 
