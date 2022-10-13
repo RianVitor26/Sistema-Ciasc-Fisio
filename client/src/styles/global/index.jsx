@@ -15,10 +15,13 @@ export const GlobalStyle = createGlobalStyle`
 
     :root{
         // Color palette
-        --body-bg: white;
-        --primary-bg: #000055;
-        --primary-color: white;
-        --secondary-color: gray;
+        --body-bg: #9bc0e2;
+        --primary-bg: #ffffff;
+        --primary-color: #1f1f1f;
+        --secondary-color: #f0f0f0;
+        --terciary-color: #3f3f3f;
+        --buttons-bg: #001b94;
+        --buttons-bg-hover: #0020ad;
     }
 
     body{
