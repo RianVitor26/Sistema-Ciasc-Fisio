@@ -94,6 +94,11 @@ export const FormContainer = styled.div`
       margin-bottom: 1em;
       border: 1px solid gray;
       border-radius: 0.5em;
+      position: relative;
+
+      :focus {
+        background-color: #f1f1f1;
+      }
 
       @media only screen and (max-width: 500px) {
         width: 90%;
@@ -101,32 +106,20 @@ export const FormContainer = styled.div`
       }
     }
 
+    b {
+      text-align: right;
+      padding-right: 20em;
+      width: 100%;
+      font-size: .4em;
+      }
+
     span {
       color: var(--buttons-bg);
       position: relative;
       height: 1em;
+      width: 100%;
       padding: 0 1em;
       font-weight: 700;
-
-      ::before {
-        position: absolute;
-        content: "";
-        height: 1px;
-        width: 50%;
-        background-color: var(--buttons-bg);
-        bottom: 50%;
-        right: 100%;
-      }
-
-      ::after {
-        position: absolute;
-        content: "";
-        height: 1px;
-        width: 50%;
-        background-color: var(--buttons-bg);
-        bottom: 50%;
-        left: 100%;
-      }
     }
   }
 `;
