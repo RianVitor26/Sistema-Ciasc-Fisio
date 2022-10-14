@@ -11,8 +11,9 @@ export const Login = () => {
   };
 
 
-  const handleSubmit = (event) => {
+  const handleSubmit = () => {
     checkEmptyfields()
+    handlePassword()
   };
 
   const inputRef = useRef();
@@ -33,12 +34,17 @@ export const Login = () => {
     <C.Wrapper>
       <C.FormContainer>
         <h1>Bem-vindo ao CIASC</h1>
-        <form action="" onSubmit={handleForm}>
+        <form
+          method="post"
+          action="/urlbackend"
+          onSubmit={handleForm}
+        >
           <label htmlFor="email">
             <MdEmail />
             <p>E-mail</p>
           </label>
           <input
+            id="email"
             ref={inputRef}
             type="email"
             placeholder="Insira seu E-mail"
@@ -50,10 +56,12 @@ export const Login = () => {
             <p>Senha</p>
           </label>
           <input
+            id="password"
             type="password"
             placeholder="Insira sua senha"
             maxLength={50}
             ref={inputRef}
+            minLength={8}
           />
 
           <button onClick={handleSubmit}>Entrar</button>

@@ -95,6 +95,11 @@ export const FormContainer = styled.div`
       border-radius: 0.5em;
       position: relative;
 
+      :invalid{
+        background: #ffc8c8;
+      }
+      
+
       :focus {
         background-color: #f1f1f1;
       }
