@@ -3,32 +3,43 @@ import { Link } from "react-router-dom";
 import { AiFillLock } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import GoogleLogin from "react-google-login";
-import { useRef, useLayoutEffect } from "react";
+import { useRef } from "react";
 
 export const Login = () => {
   const responseGoogle = (response) => {
     console.log(response);
   };
 
-  const containerRef = useRef();
+
+  const handleSubmit = (event) => {
+    checkEmptyfields()
+  };
+
+  const inputRef = useRef();
 
   const checkEmptyfields = () => {
-    containerRef.current.value.length < 1
-      ? console.log("preencha o campo")
-      : console.log("valido!!");
+    inputRef.current.value.length < 1
+      ? alert("Preencha todos os campos!")
+      : console.log("Input preenchido")
   };
+
+  const handleForm = (event) => {
+   inputRef.current.value.length > 0
+     ? console.log("Enviando dados para o backend")
+     : event.preventDefault()
+  }
 
   return (
     <C.Wrapper>
       <C.FormContainer>
         <h1>Bem-vindo ao CIASC</h1>
-        <form>
+        <form action="" onSubmit={handleForm}>
           <label htmlFor="email">
             <MdEmail />
             <p>E-mail</p>
           </label>
           <input
-            ref={containerRef}
+            ref={inputRef}
             type="email"
             placeholder="Insira seu E-mail"
             maxLength={50}
@@ -42,11 +53,10 @@ export const Login = () => {
             type="password"
             placeholder="Insira sua senha"
             maxLength={50}
-            ref={containerRef}
+            ref={inputRef}
           />
 
-          <button onClick={checkEmptyfields}>Entrar</button>
-
+          <button onClick={handleSubmit}>Entrar</button>
           <C.Alternatives>
             <Link to="/forgetpassword">Esqueceu a senha?</Link>
             <Link to="/registeremployees">Criar uma conta</Link>
