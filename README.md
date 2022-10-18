@@ -49,6 +49,9 @@
 # O comando git clone irá copiar o repositório remoto (Github) para o seu repositório local(Sua máquina)
 git clone https://github.com/RianVitor26/sistema-ciasc-fisio
 
+# Entre na pasta client
+cd client
+
 # Instale as dependências do projeto (Esse passo é importante para o funcionamento correto do projeto)
 npm install ou yarn add
 
@@ -56,7 +59,8 @@ npm install ou yarn add
 npm run dev ou yarn dev
 ```
 
-#### Contribuidores: [Caio Gaiba](https://github.com/Cgfreire),  [Jaimel Lima](https://github.com/jaimellima),  [Rian Vitor](https://github.com/RianVitor26)
+#### Contribuidores: [Caio Gaiba](https://github.com/Cgfreire),  [Jaimel Lima](https://github.com/jaimellima),  [Rian Vitor](https://github.com/RianVitor26), [Renan Pantaleão](https://github.com/rprosa), [Yan Souza](https://github.com/Yansz9), [Henrique](https://github.com/henriquecsar), [Filipe](https://github.com/filipegramlich)
+[Nycolas](https://github.com/Nycoolas)
 
 
 #### 📝 Licença
