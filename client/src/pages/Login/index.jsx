@@ -2,8 +2,8 @@ import * as C from "./styles";
 import { Link } from "react-router-dom";
 import { AiFillLock } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
-import GoogleLogin from "react-google-login";
 import { useRef } from "react";
+import { Input } from "../../components/Input";
 
 export const Login = () => {
 
@@ -30,14 +30,10 @@ export const Login = () => {
     <C.Wrapper>
       <C.FormContainer>
         <h1>Bem-vindo ao CIASC</h1>
-        <form
-          method="post"
-          action="/urlbackend"
-          onSubmit={handleForm}
-        >
+        <form method="post" action="/urlbackend" onSubmit={handleForm}>
           <label htmlFor="email">
             <MdEmail />
-            <p>E-mail</p>
+            <p>Matrícula</p>
           </label>
           <input
             id="email"
@@ -46,7 +42,6 @@ export const Login = () => {
             placeholder="Insira seu E-mail"
             maxLength={50}
           />
-
           <label htmlFor="password">
             <AiFillLock />
             <p>Senha</p>
@@ -59,11 +54,11 @@ export const Login = () => {
             ref={inputRef}
             minLength={8}
           />
-
+          <Input />
           <button onClick={handleSubmit}>Entrar</button>
           <C.Alternatives>
             <Link to="/forgetpassword">Esqueceu a senha?</Link>
-            <Link to="/registeremployees">Criar uma conta</Link>
+            <Link to="/signup">Criar uma conta</Link>
           </C.Alternatives>
         </form>
       </C.FormContainer>
