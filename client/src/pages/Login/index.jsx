@@ -6,10 +6,6 @@ import GoogleLogin from "react-google-login";
 import { useRef } from "react";
 
 export const Login = () => {
-  const responseGoogle = (response) => {
-    console.log(response);
-  };
-
 
   const handleSubmit = () => {
     checkEmptyfields()
@@ -69,12 +65,6 @@ export const Login = () => {
             <Link to="/forgetpassword">Esqueceu a senha?</Link>
             <Link to="/registeremployees">Criar uma conta</Link>
           </C.Alternatives>
-
-          <GoogleLogin
-            clientId="168587184055-sm9net1fl2l2ii75k9kb2o8f79n1bre7.apps.googleusercontent.com"
-            buttonText="Continuar com o Google"
-            onSuccess={responseGoogle}
-          />
         </form>
       </C.FormContainer>
     </C.Wrapper>
