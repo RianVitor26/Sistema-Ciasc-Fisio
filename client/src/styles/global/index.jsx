@@ -5,7 +5,6 @@ export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
     *{
-        //Reset the global style
 
         margin: 0;
         padding: 0;
@@ -14,14 +13,19 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     :root{
-        // Color palette
-        --body-bg: #9bc0e2;
-        --primary-bg: #ffffff;
-        --primary-color: #1f1f1f;
+        --body-bg: rgb(2,3,129);
+        --primary-bg: #f5f5f5;
+        --primary-color: #113188;
+        --primary-color-hover: #2452d1;
         --secondary-color: #f0f0f0;
         --terciary-color: #3f3f3f;
-        --buttons-bg: #001b94;
+        --buttons-bg: #0693F0;
         --buttons-bg-hover: #0020ad;
+        --error-color: #cf2e2e;
+    }
+
+    html{
+       font-size: 62.5%;
     }
 
     body{
