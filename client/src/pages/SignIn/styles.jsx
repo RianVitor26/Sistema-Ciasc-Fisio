@@ -8,6 +8,25 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
+  span {
+    font-size: clamp(16px, 2rem, 100px);
+    font-weight: bold;
+    color: var(--button-bg);
+    margin-bottom: 5rem;
+    position: relative;
+    padding-bottom: .5rem;
+
+    :before{
+      content: '';
+      width: 50%;
+      height: .4rem;
+      background: var(--button-bg);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
   form {
     display: flex;
     flex-direction: column;
@@ -33,7 +52,6 @@ export const Container = styled.div`
       padding: 0.5rem;
     }
   }
-
 `;
 export const Links = styled.div`
   width: 100%;
@@ -42,9 +60,14 @@ export const Links = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
 
+  @media only screen and (max-width: 300px) {
+    justify-content: center;
+  }
+
   a {
     font-size: clamp(12px, 1.4rem, 100px);
     margin-bottom: 2rem;
+    color: #607d8b;
 
     :nth-child(1) {
       margin-right: 1rem;

@@ -1,4 +1,5 @@
 import * as C from "./styles";
+import { Link } from "react-router-dom";
 
 export const RedefinePassword = () => {
   return (
@@ -17,6 +18,7 @@ export const RedefinePassword = () => {
           placeholder="Confirme sua senha"
         />
         <button>Enviar</button>
+        <Link to="/forgetpassword">Cancelar</Link>
       </form>
     </C.Container>
   );

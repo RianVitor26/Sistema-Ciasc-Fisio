@@ -7,11 +7,50 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: 'Poppins', Sans-Serif;
+
+        button{
+            border: none;
+            background: var( --button-bg);
+            color: var( --light-text);
+            border-radius: var( --normal-radius);
+
+            :hover{
+                 background: var( --button-bg-hover);
+                 transition: var(--normal-transition);
+            }
+        }
+
+        input{
+             border-radius: var( --normal-radius);
+             border: 1px solid var(--border);
+
+             :focus{
+                outline: 1px solid var(--normal-outline);
+             }
+        }
+
+        label{
+            font-weight: bold;
+            color: #616161;
+            display: flex;
+            align-items: center;
+        }
+
+        svg{
+            margin-right: .5rem;
+            color: var(--button-bg)
+        }
     }
 
     :root{
-        --normal-radius: 1rem;
+        --normal-radius: .5rem;
         --normal-transition: all ease .5s;
+        --light-text: #eeeeee;
+        --button-bg: #34b5ff;
+        --button-bg-hover: #3ec2ff;
+        --border: #bdbdbd;
+        --normal-outline: #757575;
+        --button-cancel-bg: #cf2e2e;
     }
 
     html{
@@ -21,5 +60,6 @@ export const GlobalStyle = createGlobalStyle`
     body{
         width: 100%;
         height: 100vh;
+        background: #fafafa;
     }
 `;

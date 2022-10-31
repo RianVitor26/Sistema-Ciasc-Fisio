@@ -31,26 +31,22 @@ export const Container = styled.div`
       cursor: pointer;
       font-size: clamp(12px, 1.4rem, 100px);
       padding: 0.5rem;
+      margin-bottom: 1rem;
+      background: #0693e3;
+      color: var(--light-text);
     }
-  }
 
-`;
-export const Links = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  a {
-    font-size: clamp(12px, 1.4rem, 100px);
-    margin-bottom: 2rem;
-
-    :nth-child(1) {
-      margin-right: 1rem;
-    }
-    :nth-child(2) {
-      margin-left: 1rem;
+    a {
+      font-size: clamp(12px, 1.4rem, 100px);
+      text-align: center;
+      background: var(--button-cancel-bg);
+      height: 3.5rem;
+      text-decoration: none;
+      display: flex;  
+      justify-content: center;
+      align-items: center;
+      border: 1px solid gray;
+      color: white;
     }
   }
 `;

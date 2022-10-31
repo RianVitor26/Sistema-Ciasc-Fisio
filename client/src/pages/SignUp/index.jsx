@@ -1,4 +1,5 @@
 import * as C from "./styles";
+import { Link } from 'react-router-dom'
 
 export const SignUp = () => {
   return (
@@ -6,28 +7,34 @@ export const SignUp = () => {
       <form method="POST" action="">
         <label htmlFor="Nome Completo">Nome completo</label>
         <input
+          required
           id="Nome completo"
           type="text"
-          placeholder="Insira seu E-mail" />
+          placeholder="Insira seu nome Completo"
+        />
         <label htmlFor="E-mail">E-mail</label>
         <input
+          required
           id="E-mail"
           type="email"
           placeholder="Insira seu E-mail"
         />
         <label htmlFor="Usuário">Senha</label>
         <input
+          required
           id="Senha"
           type="password"
-          placeholder="Confirme sua senha"
+          placeholder="Insira sua senha"
         />
         <label htmlFor="Confirmar senha">Confirmar senha</label>
         <input
+          required
           id="Confirmar senha"
-          type="text"
-          placeholder="Insira sua matrícula"
+          type="password"
+          placeholder="Confirme sua senha"
         />
         <button>Cadastrar</button>
+        <Link to="/">Cancelar</Link>
       </form>
     </C.Container>
   );
