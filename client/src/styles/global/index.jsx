@@ -49,11 +49,12 @@ export const GlobalStyle = createGlobalStyle`
         --normal-radius: .5rem;
         --normal-transition: all ease .5s;
         --light-text: #eeeeee;
-        --button-bg: #34b5ff;
-        --button-bg-hover: #3ec2ff;
+        --button-bg: #225cb4;
+        --button-bg-hover: #1e519e;
         --border: #bdbdbd;
         --normal-outline: #757575;
         --button-cancel-bg: #cf2e2e;
+        --dark-text: #263238;
     }
 
     html{

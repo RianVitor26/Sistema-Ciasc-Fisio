@@ -51,7 +51,7 @@ export const SignUp = () => {
         <select name="acess" id="acess">
           <option value="aluno">Aluno</option>
           <option value="professor">Professor</option>
-          <option value="recepçao">Recepção</option>
+          <option value="recepçao">Recepcionista</option>
         </select>
 
         <button>Cadastrar</button>

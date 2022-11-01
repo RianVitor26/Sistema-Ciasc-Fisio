@@ -40,13 +40,13 @@ export const Container = styled.div`
       font-size: clamp(12px, 1.4rem, 100px);
       text-align: center;
       background: #cf2e2e;
-      height: 3.5rem;
+      height: 3.3rem;
       text-decoration: none;
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 1px solid gray;
-      color: white;
+      color: var(--light-text);
+      border-radius: 0.5rem;
     }
   }
 `;
