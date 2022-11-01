@@ -11,12 +11,24 @@ export const SignIn = () => {
           <FaUserAlt />
           Usuário
         </label>
-        <input required type="text" placeholder="Insira sua matrícula" />
+        <input
+          minLength={8}
+          maxLength={50}
+          required
+          type="text"
+          placeholder="Insira sua matrícula"
+        />  
         <label htmlFor="Senha">
           <FaLock />
           Senha
         </label>
-        <input required type="text" placeholder="Insira sua senha" />
+        <input
+          minLength={8}
+          maxLength={50}
+          required
+          type="text"
+          placeholder="Insira sua senha"
+        />
         <C.Links>
           <Link to="/signup">Criar uma conta</Link>
           <Link to="/forgetpassword">Esqueci minha senha</Link>

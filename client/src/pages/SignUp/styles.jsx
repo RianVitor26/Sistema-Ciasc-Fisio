@@ -47,5 +47,9 @@ export const Container = styled.div`
       border: 1px solid gray;
       color: white;
     }
+
+    select{
+      margin-bottom: 2rem;
+    }
   }
 `;

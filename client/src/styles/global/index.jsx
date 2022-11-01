@@ -40,6 +40,9 @@ export const GlobalStyle = createGlobalStyle`
             margin-right: .5rem;
             color: var(--button-bg)
         }
+        select{
+            border: 1px solid var(--border);
+        }
     }
 
     :root{
