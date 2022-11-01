@@ -6,28 +6,32 @@ import { useState } from 'react'
 
 export const Menu = () => {
 
-    const [acessType, setAcessType] = useState('Recepcionista')
+  const [acessType, setAcessType] = useState('Professor')
+  
+  const defineTypeAcess = () => {
+    acessType === "Professor" ? setAcessType("Aluno") : setAcessType("Recepcionista")
+  }
 
   return (
     <C.Container>
-          <h1>Bem-vindo(a) {acessType}(a)</h1>
+      <button onClick={defineTypeAcess}>Simular acesso</button>
+      <h1>Bem-vindo(a) {acessType}(a)</h1>
       <C.MenuContainer>
-
         {acessType === "Professor" ? (
           <>
             <Link to="/">Lista de pacientes</Link>
             <Link to="/">Registro geral</Link>
             <Link to="/">Lista de alunos</Link>
           </>
-              ) : null}
-              
+        ) : null}
+
         {acessType === "Aluno" ? (
           <>
             <Link to="/">Lista de pacientes</Link>
             <Link to="/">Ver perfil</Link>
           </>
-              ) : null}
-              
+        ) : null}
+
         {acessType === "Recepcionista" ? (
           <>
             <Link to="/">Cadastrar</Link>

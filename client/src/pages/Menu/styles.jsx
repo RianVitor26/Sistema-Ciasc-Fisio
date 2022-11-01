@@ -7,6 +7,11 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
+  button{
+    padding: 1rem;
+    margin-bottom: 4rem;
+  }
 
   h1 {
     font-size: clamp(14px, 2rem, 100px);
