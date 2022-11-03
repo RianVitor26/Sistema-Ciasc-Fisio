@@ -1,8 +1,16 @@
 import * as C from "./styles";
 import { Link } from 'react-router-dom'
 import { FaUserAlt, FaLock } from "react-icons/fa";
+import api from "../../services/api";
+import { useEffect } from 'react'
 
 export const SignIn = () => {
+  
+  useEffect(() => {
+    api.get("api").then((Response) => console.log(Response.data))
+  }, [])
+
+
   return (
     <C.Container>
       <span>Login</span>

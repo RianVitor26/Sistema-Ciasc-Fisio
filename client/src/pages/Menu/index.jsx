@@ -15,7 +15,15 @@ export const Menu = () => {
   return (
     <C.Container>
       <button onClick={defineTypeAcess}>Simular acesso</button>
-      <h1>Bem-vindo(a) {acessType}(a)</h1>
+      {acessType === "Recepcionista" ? (
+        <>
+          <h1>Bem-vindo(a), {acessType}</h1>
+        </>
+      ) : (
+        <>
+          <h1>Bem-vindo(a), {acessType}(a)</h1>
+        </>
+      )}
       <C.MenuContainer>
         {acessType === "Professor" ? (
           <>
@@ -34,8 +42,8 @@ export const Menu = () => {
 
         {acessType === "Recepcionista" ? (
           <>
-            <Link to="/">Cadastrar</Link>
-            <Link to="/">Lista de alunos</Link>
+            <Link to="/patientregistration">Cadastrar paciente</Link>
+            <Link to="/">Lista de pacientes</Link>
           </>
         ) : null}
 
