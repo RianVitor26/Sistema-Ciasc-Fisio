@@ -14,7 +14,7 @@ export const SignIn = () => {
   return (
     <C.Container>
       <span>Login</span>
-      <form method="POST" action="/api">
+      <form method="POST" action="/api/login">
         <label htmlFor="Usuário">
           <FaUserAlt />
           Usuário
@@ -25,6 +25,7 @@ export const SignIn = () => {
           required
           type="text"
           placeholder="Insira sua matrícula"
+          name="user"
         />  
         <label htmlFor="Senha">
           <FaLock />
@@ -34,8 +35,9 @@ export const SignIn = () => {
           minLength={8}
           maxLength={50}
           required
-          type="text"
+          type="password"
           placeholder="Insira sua senha"
+          name="password"
         />
         <C.Links>
           <Link to="/signup">Criar uma conta</Link>

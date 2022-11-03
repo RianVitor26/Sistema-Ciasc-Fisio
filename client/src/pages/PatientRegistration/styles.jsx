@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-   padding-top: 5rem;
+  padding-top: 5rem;
 
   form {
     display: flex;
@@ -26,6 +26,8 @@ export const Container = styled.div`
       padding: 0.5rem;
       margin-bottom: 2rem;
     }
+
+  
 
     button {
       cursor: pointer;
@@ -57,14 +59,19 @@ export const Container = styled.div`
 `;
 
 export const Perfil = styled.div`
-  width: 10rem;
-  height: 10rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 50%;
   border: 1px solid var(--border);
+  margin: 0 auto;
+  background: var(--button-bg);
+  border: 1px solid var(--button-bg);
+  margin-bottom: 0.5em;
 
-  img{
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%;
   }
-`
+`;

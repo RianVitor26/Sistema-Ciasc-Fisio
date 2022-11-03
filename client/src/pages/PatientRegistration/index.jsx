@@ -1,25 +1,27 @@
 import * as C from "./styles";
-import { Link } from 'react-router-dom'
-import { useState } from 'react'
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export const PatientRegistration = () => {
-
-  const [photo, setPhoto] = useState("Rian.png");
-
-  const handleChangePhoto = (e) => {
-    const urlImage = e.target.value
-    console.log(urlImage)
-  }
-
+  const defaultImg = "avatar.png";
+  const [photo, setPhoto] = useState("");
 
   return (
     <C.Container>
       <form method="POST" action="/api">
         <C.Perfil>
-          <img src={photo} />
+          {photo ? (
+            <img src={URL.createObjectURL(photo)} alt="Foto do paciente" />
+          ) : (
+            <img src={defaultImg} alt="default image" />
+          )}
         </C.Perfil>
 
-        <input onChange={handleChangePhoto} type="file" />
+        <input
+          name="photo"
+          type="file"
+          onChange={(e) => setPhoto(e.target.files[0])}
+        />
         <label htmlFor="Nome Completo">Nome completo</label>
         <input
           maxLength={50}
@@ -30,11 +32,12 @@ export const PatientRegistration = () => {
         />
         <label htmlFor="CPF">CPF</label>
         <input
-          maxLength={11}
+          minLength={11}
           required
           id="CPF"
+          name="cpf"
           type="text"
-          placeholder="Insira seu CPF"
+          placeholder="000.000.000-00"
         />
         <label htmlFor="E-mail">E-mail</label>
         <input
@@ -42,7 +45,7 @@ export const PatientRegistration = () => {
           required
           id="E-mail"
           type="email"
-          placeholder="Insira seu E-mail"
+          placeholder="seuemail@exemplo.com"
         />
         <label htmlFor="Telefone">Telefone</label>
         <input
@@ -53,7 +56,7 @@ export const PatientRegistration = () => {
           placeholder="Insira seu telefone"
         />
         <label htmlFor="CEP">CEP</label>
-        <input required id="CEP" type="text" placeholder="Insira seu CEP" />
+        <input required id="CEP" type="text" placeholder="00000-000" />
         <label htmlFor="Rua">Rua</label>
         <input required id="Rua" type="text" placeholder="Insira sua Rua" />
         <label htmlFor="Cidade">Cidade</label>
