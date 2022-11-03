@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,7 +30,7 @@ export const Container = styled.div`
       cursor: pointer;
       font-size: clamp(12px, 1.4rem, 100px);
       padding: 0.5rem;
-      margin-bottom: 1rem;
+      margin: 1rem 0;
       color: var(--light-text);
     }
 
@@ -45,10 +44,10 @@ export const Container = styled.div`
       justify-content: center;
       align-items: center;
       color: var(--light-text);
-      border-radius: .5rem;
+      border-radius: 0.5rem;
     }
 
-    select{
+    select {
       margin-bottom: 2rem;
     }
   }

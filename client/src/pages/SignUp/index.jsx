@@ -1,7 +1,13 @@
 import * as C from "./styles";
 import { Link } from 'react-router-dom'
+import ReCAPTCHA from "react-google-recaptcha";
 
 export const SignUp = () => {
+
+  const onChange = (value) => {
+    console.log("Captcha value:", value);
+  }
+
   return (
     <C.Container>
       <form method="POST" action="/api">
@@ -53,6 +59,11 @@ export const SignUp = () => {
           <option value="professor">Professor</option>
           <option value="recepçao">Recepcionista</option>
         </select>
+
+        <ReCAPTCHA
+          sitekey="6LdYbNYiAAAAADlrTAzr2S7NM0DDw5IQWuuqE_ul"
+          onChange={onChange}
+        />
 
         <button>Cadastrar</button>
         <Link to="/">Cancelar</Link>
