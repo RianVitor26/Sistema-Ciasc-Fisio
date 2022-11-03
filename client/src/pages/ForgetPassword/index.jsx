@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 export const ForgetPassword = () => {
   return (
     <C.Container>
-      <form action="">
+      <form method="POST" action="/api">
         <label htmlFor="Matrícula">Matrícula</label>
         <input id="Matrícula" type="text" placeholder="Insira sua matrícula"/>
         <label htmlFor="E-mai">E-mail</label>

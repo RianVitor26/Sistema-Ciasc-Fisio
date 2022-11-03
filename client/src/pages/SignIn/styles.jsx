@@ -14,13 +14,18 @@ export const Container = styled.div`
     color: var(--button-bg);
     margin-bottom: 5rem;
     position: relative;
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
 
-    :before{
-      content: '';
-      width: 50%;
-      height: .4rem;
-      background: var(--button-bg);
+    :before {
+      content: "";
+      width: 60%;
+      height: 0.4rem;
+      background: linear-gradient(
+        90deg,
+        var(--button-bg-hover) 0%,
+        var(--button-bg) 50%,
+        var(--body-bg) 100%
+      );
       position: absolute;
       bottom: 0;
       left: 0;
@@ -67,7 +72,12 @@ export const Links = styled.div`
   a {
     font-size: clamp(12px, 1.4rem, 100px);
     margin-bottom: 2rem;
-    color: #607d8b;
+    color: var(--button-bg);
+    transition: var(--normal-transition);
+
+    :hover{
+      color: var(--button-bg-hover);
+    }
 
     :nth-child(1) {
       margin-right: 1rem;

@@ -14,7 +14,7 @@ export const SignIn = () => {
   return (
     <C.Container>
       <span>Login</span>
-      <form method="POST" action="">
+      <form method="POST" action="/api">
         <label htmlFor="Usuário">
           <FaUserAlt />
           Usuário

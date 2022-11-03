@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export const SignUp = () => {
   return (
     <C.Container>
-      <form method="POST" action="">
+      <form method="POST" action="/api">
         <label htmlFor="Nome Completo">Nome completo</label>
         <input
           maxLength={50}

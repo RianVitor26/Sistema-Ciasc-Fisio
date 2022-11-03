@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const RedefinePassword = () => {
   return (
     <C.Container>
-      <form action="">
+      <form method="PUT" action="/api">
         <label htmlFor="Password">Nova senha</label>
         <input
           id="Password"

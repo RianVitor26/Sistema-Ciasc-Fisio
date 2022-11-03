@@ -38,7 +38,7 @@ export const GlobalStyle = createGlobalStyle`
 
         svg{
             margin-right: .5rem;
-            color: var(--button-bg)
+            color: var(--button-bg);
         }
         select{
             border: 1px solid var(--border);
@@ -50,11 +50,12 @@ export const GlobalStyle = createGlobalStyle`
         --normal-transition: all ease .5s;
         --light-text: #eeeeee;
         --button-bg: #225cb4;
-        --button-bg-hover: #1e519e;
+        --button-bg-hover: #123d7e;
         --border: #bdbdbd;
         --normal-outline: #757575;
         --button-cancel-bg: #cf2e2e;
         --dark-text: #263238;
+        --body-bg: #fafafa
     }
 
     html{
@@ -64,6 +65,6 @@ export const GlobalStyle = createGlobalStyle`
     body{
         width: 100%;
         height: 100vh;
-        background: #fafafa;
+        background: var(--body-bg);
     }
 `;

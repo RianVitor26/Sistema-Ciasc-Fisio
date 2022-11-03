@@ -14,7 +14,7 @@ export const PatientRegistration = () => {
 
   return (
     <C.Container>
-      <form method="POST" action="">
+      <form method="POST" action="/api">
         <C.Perfil>
           <img src={photo} />
         </C.Perfil>
